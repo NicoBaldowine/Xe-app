@@ -25,3 +25,58 @@
 #container a {
   text-decoration: none;
 }
+
+.summary-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    ion-icon {
+      font-size: 20px;
+      color: #666;
+    }
+  }
+
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    .label {
+      color: #666;
+    }
+
+    .value {
+      font-weight: 500;
+    }
+
+    &.total {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #eee;
+
+      .label, .value {
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+ion-button {
+  margin: 16px;
+}

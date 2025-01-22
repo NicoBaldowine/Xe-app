@@ -1,0 +1,75 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-container">
+    <h1 class="page-title">Transfer summary</h1>
+    
+    <div class="summary-section">
+      <div class="section-header">
+        <h2>Transfer</h2>
+        <ion-icon name="pencil-outline" class="edit-icon"></ion-icon>
+      </div>
+      
+      <div class="detail-item">
+        <span class="label">You send</span>
+        <span class="value">{{transferDetails.sendAmount}}</span>
+      </div>
+
+      <div class="detail-item">
+        <span class="label">Exchange rate</span>
+        <span class="value">{{transferDetails.exchangeRate}}</span>
+      </div>
+
+      <div class="detail-item">
+        <span class="label">Recipient gets</span>
+        <span class="value">{{transferDetails.recipientGets}}</span>
+      </div>
+
+      <div class="detail-item">
+        <span class="label">Send fee(s)</span>
+        <span class="value">{{transferDetails.sendFee}}</span>
+      </div>
+
+      <div class="detail-item total">
+        <span class="label">Total cost</span>
+        <span class="value">{{transferDetails.totalCost}}</span>
+      </div>
+    </div>
+
+    <div class="summary-section">
+      <div class="section-header">
+        <h2>Payment</h2>
+        <ion-icon name="pencil-outline" class="edit-icon"></ion-icon>
+      </div>
+      <div class="detail-item">
+        <span class="value">Bank Transfer</span>
+      </div>
+    </div>
+
+    <div class="summary-section">
+      <div class="section-header">
+        <h2>Delivery</h2>
+      </div>
+      <div class="detail-item">
+        <span class="label">Bank</span>
+        <span class="value">{{transferDetails.bankName}} {{transferDetails.accountNumber}}</span>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-button expand="block" class="confirm-button" (click)="onConfirm()">
+      Confirm and send money
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

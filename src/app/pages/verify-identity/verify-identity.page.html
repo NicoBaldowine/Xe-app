@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-container">
+    <h1 class="page-title">Verify your identity</h1>
+    
+    <div class="summary-section">
+      <h2 class="section-subtitle">Make sure:</h2>
+      
+      <div class="verification-list">
+        <div class="verification-item" *ngFor="let point of verificationPoints">
+          <div class="number-circle">{{point.number}}</div>
+          <div class="text-content">
+            {{point.text}} <span class="highlight">{{point.highlight}}</span>
+            <span *ngIf="point.additional"> {{point.additional}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-button expand="block" class="continue-button" (click)="onContinue()">
+      Continue
+    </ion-button>
+  </ion-toolbar>
+</ion-footer> 

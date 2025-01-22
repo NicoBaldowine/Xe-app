@@ -35,3 +35,174 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+/* Set Inter as default font */
+:root {
+  --ion-font-family: 'Inter', sans-serif;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Apply specific font weights */
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+// Custom back button style
+ion-back-button {
+  --color: #000;
+  --icon-font-size: 24px;
+}
+
+// Card-like sections
+.summary-section {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.auto-height-modal {
+  --width: 100%;
+  --min-width: 100%;
+  --max-width: 100%;
+  --height: auto;
+  --border-radius: 16px 16px 0 0;
+  align-items: flex-end;
+  
+  ion-content {
+    --background: white;
+  }
+
+  .ion-page {
+    position: relative;
+    display: block;
+    contain: content;
+  }
+
+  &::part(content) {
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+.modal-content {
+  background: white;
+}
+
+// Add backdrop styling
+ion-modal::part(backdrop) {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.file-number-modal {
+  --height: fit-content;
+  --max-height: 50%;
+  
+  &::part(content) {
+    position: absolute;
+    bottom: 0;
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+ion-modal.file-number-modal {
+  --backdrop-opacity: 0.4;
+  
+  .ion-page {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    background: white;
+  }
+}
+
+.bottom-sheet-modal {
+  --height: auto;
+  --max-height: 100%;
+  transform: translateY(-24px);
+  
+  &::part(content) {
+    border-radius: 16px 16px 0 0;
+    background: white;
+    overflow: hidden;
+  }
+
+  &::part(handle) {
+    background: #E8EBED;
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 12px;
+  }
+  
+  .modal-wrapper {
+    height: auto;
+    min-height: fit-content;
+    background: white;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+  }
+
+  ion-backdrop {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    padding: 0 16px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    p {
+      line-height: 24px !important;
+    }
+  }
+
+  ion-button {
+    margin: 16px 0 16px 0;
+    --color: white;
+    --box-shadow: none;
+    
+    &::part(native) {
+      color: white !important;
+      font-family: 'Inter', sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0 !important;
+      text-transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+// Override any ion-content background colors
+ion-modal.bottom-sheet-modal {
+  --background: white;
+  
+  &::part(content) {
+    background: white;
+  }
+
+  ion-content {
+    --background: white;
+    
+    &::part(scroll) {
+      background: white;
+    }
+  }
+}

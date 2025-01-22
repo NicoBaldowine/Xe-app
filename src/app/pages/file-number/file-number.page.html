@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-container">
+    <h1 class="page-title">Additional Information</h1>
+    
+    <div class="info-box">
+      <ion-icon name="information-circle"></ion-icon>
+      <p>We need some more information from you before you can send money.</p>
+    </div>
+
+    <div class="input-section">
+      <ion-label>Passport file number</ion-label>
+      <div class="input-container">
+        <input 
+          type="text"
+          [(ngModel)]="fileNumber"
+          placeholder="Enter file name"
+          class="custom-input">
+      </div>
+      <div class="help-link" (click)="showFileNumberHelp()">
+        Where to find my file number?
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-button 
+      expand="block" 
+      class="continue-button" 
+      (click)="onContinue()"
+      [disabled]="!isButtonEnabled"
+      [class.button-disabled]="!isButtonEnabled">
+      Continue
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

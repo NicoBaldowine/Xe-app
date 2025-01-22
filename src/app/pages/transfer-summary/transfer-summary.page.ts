@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-transfer-summary',
+  templateUrl: './transfer-summary.page.html',
+  styleUrls: ['./transfer-summary.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule]
+  imports: [IonicModule, CommonModule, RouterModule]
 })
-export class HomePage {
+export class TransferSummaryPage {
   transferDetails = {
     sendAmount: '1,200.00 NZD',
     exchangeRate: '1.00 USD = 1.008 CLP',
@@ -20,9 +21,9 @@ export class HomePage {
     accountNumber: '•••• 4673'
   };
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   onConfirm() {
-    console.log('Transfer confirmed');
+    this.router.navigate(['/verify-identity']);
   }
 }

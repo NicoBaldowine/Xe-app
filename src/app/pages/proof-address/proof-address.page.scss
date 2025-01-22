@@ -1,0 +1,148 @@
+:host {
+  background: #F5F5F5;
+}
+
+ion-content {
+  --background: #F5F5F5;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+// Header styles
+ion-header {
+  ion-toolbar {
+    --min-height: 54px;
+    --padding-start: 0;
+    --padding-end: 16px;
+    --background: #F5F5F5;
+    --border-style: none;
+    
+    ion-buttons {
+      margin: 0;
+      padding-left: 16px;
+      
+      ion-button {
+        --padding-start: 0;
+        --padding-end: 0;
+        margin: 0;
+        height: 24px;
+        width: 24px;
+        position: relative;
+        left: -4px;
+        
+        ion-icon {
+          font-size: 24px;
+          color: #333333;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #333333;
+    margin: 8px 0 24px 0;
+}
+
+.requirements-list {
+  margin-bottom: 32px;
+
+  .requirement {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    ion-icon {
+      font-size: 24px;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    span {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: #5C667B;
+    }
+
+    &.success {
+      ion-icon {
+        color: #34C759;
+      }
+    }
+
+    &.error {
+      ion-icon {
+        color: #FF3B30;
+      }
+    }
+  }
+}
+
+.upload-box {
+  border: 1px dashed #C5C6CC;
+  border-radius: 8px;
+  height: 68px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background: white;
+  cursor: pointer;
+  margin-bottom: 32px;
+  padding: 0 24px;
+  gap: 8px;
+
+  ion-icon {
+    font-size: 24px;
+    color: #006CE0;
+    margin: 0;
+  }
+
+  span {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+  }
+}
+
+.continue-button {
+  --background: #006CE0;
+  --border-radius: 8px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --box-shadow: none;
+  height: 48px;
+  opacity: 0.3;
+  position: fixed;
+  bottom: 24px;
+  left: 16px;
+  right: 16px;
+  margin: 0;
+  width: calc(100% - 32px);
+
+  &.button-disabled {
+    --background: #006CE0;
+    opacity: 0.3;
+  }
+
+  &::part(native) {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}

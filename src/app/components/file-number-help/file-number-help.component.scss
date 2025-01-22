@@ -1,0 +1,82 @@
+.modal-content {
+  padding-top: 12px;
+  text-align: center;
+}
+
+.drag-indicator {
+  width: 32px;
+  height: 4px;
+  background: #E8EBED;
+  border-radius: 2px;
+  margin: 0 auto 32px;
+}
+
+.icon-container {
+  width: 48px;
+  height: 48px;
+  background: #DAE8F5;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+
+  ion-icon {
+    color: #0061CA;
+    font-size: 24px;
+  }
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 24px;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  text-align: left;
+
+  li {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    position: relative;
+
+    &:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.learn-more-button {
+  --background: #006CE0;
+  --border-radius: 8px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --box-shadow: none;
+  margin: 0;
+  height: 48px;
+
+  &::part(native) {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+} 

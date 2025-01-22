@@ -1,20 +1,63 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Transfer summary</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="summary-section">
+    <div class="section-header">
+      <h2>Transfer</h2>
+      <ion-icon name="pencil-outline"></ion-icon>
+    </div>
+    
+    <div class="detail-item">
+      <span class="label">You send</span>
+      <span class="value">{{transferDetails.sendAmount}}</span>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="detail-item">
+      <span class="label">Exchange rate</span>
+      <span class="value">{{transferDetails.exchangeRate}}</span>
+    </div>
+
+    <div class="detail-item">
+      <span class="label">Recipient gets</span>
+      <span class="value">{{transferDetails.recipientGets}}</span>
+    </div>
+
+    <div class="detail-item">
+      <span class="label">Send fee(s)</span>
+      <span class="value">{{transferDetails.sendFee}}</span>
+    </div>
+
+    <div class="detail-item total">
+      <span class="label">Total cost</span>
+      <span class="value">{{transferDetails.totalCost}}</span>
+    </div>
   </div>
+
+  <div class="summary-section">
+    <div class="section-header">
+      <h2>Payment</h2>
+      <ion-icon name="pencil-outline"></ion-icon>
+    </div>
+    <div class="detail-item">
+      <span class="value">Bank Transfer</span>
+    </div>
+  </div>
+
+  <div class="summary-section">
+    <div class="section-header">
+      <h2>Delivery</h2>
+    </div>
+    <div class="detail-item">
+      <span class="label">Bank</span>
+      <span class="value">{{transferDetails.bankName}} {{transferDetails.accountNumber}}</span>
+    </div>
+  </div>
+
+  <ion-button expand="block" (click)="onConfirm()">
+    Confirm and send money
+  </ion-button>
 </ion-content>

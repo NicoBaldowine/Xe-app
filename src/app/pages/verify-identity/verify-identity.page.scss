@@ -1,0 +1,142 @@
+// Header styles (same as transfer summary)
+ion-header {
+  ion-toolbar {
+    --min-height: 54px;
+    --padding-start: 0;
+    --padding-end: 16px;
+    --background: #F5F5F5;
+    --border-style: none;
+    
+    ion-buttons {
+      margin: 0;
+      padding-left: 16px;
+      
+      ion-button {
+        --padding-start: 0;
+        --padding-end: 0;
+        margin: 0;
+        height: 24px;
+        width: 24px;
+        position: relative;
+        left: -4px;
+        
+        ion-icon {
+          font-size: 24px;
+          color: #333333;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// Content styles
+.content-container {
+  padding: 0 16px;
+
+  .page-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #333333;
+    margin: 16px 0 24px 0;
+  }
+}
+
+.summary-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+
+  .section-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0 0 24px 0;
+  }
+}
+
+.verification-list {
+  .verification-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .number-circle {
+      width: 32px;
+      height: 32px;
+      background: #F5F5F5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      color: #666666;
+      margin-right: 16px;
+      flex-shrink: 0;
+    }
+
+    .text-content {
+      font-family: 'Inter', sans-serif;
+      color: #666666;
+      font-size: 16px;
+      line-height: 1.5;
+      padding-top: 4px;
+
+      .highlight {
+        color: #333333;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Footer styles
+ion-footer {
+  ion-toolbar {
+    --background: #F5F5F5;
+    padding: 0 16px 24px;
+    
+    ion-button {
+      --background: #006CE0;
+      --border-radius: 8px;
+      --padding-top: 16px;
+      --padding-bottom: 16px;
+      --box-shadow: none;
+      --ripple-color: transparent;
+      margin: 0;
+      height: 48px;
+
+      &::part(native) {
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: none;
+        letter-spacing: 0;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+// Make sure content background extends to the bottom
+ion-content {
+  --background: #F5F5F5;
+  &::part(scroll) {
+    min-height: 100%;
+    background: #F5F5F5;
+  }
+}
+
+// Add this to ensure the footer has the correct background
+:host {
+  background: #F5F5F5;
+} 
