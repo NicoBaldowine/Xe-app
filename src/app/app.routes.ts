@@ -11,6 +11,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/transfer-summary/transfer-summary.page').then(m => m.TransferSummaryPage)
   },
   {
+    path: 'verify-identity',
+    loadComponent: () => import('./pages/verify-identity/verify-identity.page').then(m => m.VerifyIdentityPage)
+  },
+  {
     path: 'file-number',
     loadComponent: () => import('./pages/file-number/file-number.page').then(m => m.FileNumberPage)
   },
